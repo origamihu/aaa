@@ -151,7 +151,7 @@ if start_button1 and not start_button2:
 
         t += 1
         time.sleep(1)
-    ii.image('a.gif')
+    ii.image('aaa.gif')
 if start_button2:
     st.write('阀门状态已改变,继续记录换热器1和换热器2的出入口温度变化')
     t = 200
