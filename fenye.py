@@ -162,7 +162,7 @@ if start_button2:
     outlet1 = []  # 重新初始化outlet1列表
     outlet2 = []  # 重新初始化outlet2列表
     while t < 400:
-        ii.image('a.gif')
+        ii.image('aaa.gif')
         Q1 = 2.5 * 0.98 * V * A / 1000
         y1 = t0 + Q1 / (G1 * Cp)  # 1出口温度
         Q2 = 1.5 * 0.98 * V * A / 1000
