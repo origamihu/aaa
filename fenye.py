@@ -20,9 +20,9 @@ st.markdown("二、实验原理和步骤 ")
 st.write("实验装置由全封闭压缩机、换热器 1、换热器 2、浮子节流阀、四通换向阀及管路等组成制冷（热泵）循环系统;由转子流量计及换热器内盘管等组成水系统；还设有温度、压力、电流、电压等测量仪表。 ")
 #st.write("由转子流量计及换热器内盘管等组成水系统；还设有温度、压力、电流、电压等测量仪表。 ")
 st.write("装置原理示意图如图 1 和图 2 所示。 ")
-st.image('11.png')
+st.image('aaa/11.png')
 st.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图 1 制冷（热泵）循环演示装置原理图 ")
-st.image('22.png')
+st.image('aaa/22.png')
 st.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图 2 制冷剂流向改变流程图 ")
 st.write("当系统作制冷（热泵）循环时，换热器 1 为蒸发器（冷凝器），换热器 2 为冷凝器（蒸发器）。 ")
 st.write(" ")
@@ -55,7 +55,7 @@ run_time = 200
 st.write('')
 
 ii = st.empty()
-ii.image('1.jpg', width=600)
+ii.image('aaa/1.jpg', width=600)
 start_button1 = st.button('电源开关')
 start_button2 = st.button('转换阀门状态')
 
@@ -86,7 +86,7 @@ if start_button1 and not start_button2:
 
     while t < 200:
 
-        ii.image('aaa.gif')
+        ii.image('aaa/aaa.gif')
         Q1 = 1.5 * 0.98 * V * A / 1000
         y1 = t0 - Q1 / (G1 * Cp)        # 1出口温度
         Q2 = 2.5 * 0.98 * V * A / 1000
@@ -151,7 +151,7 @@ if start_button1 and not start_button2:
 
         t += 1
         time.sleep(1)
-    ii.image('a.gif')
+    ii.image('aaa/a.gif')
 if start_button2:
     st.write('阀门状态已改变,继续记录换热器1和换热器2的出入口温度变化')
     t = 200
@@ -162,7 +162,7 @@ if start_button2:
     outlet1 = []  # 重新初始化outlet1列表
     outlet2 = []  # 重新初始化outlet2列表
     while t < 400:
-        ii.image('a.gif')
+        ii.image('aaa/a.gif')
         Q1 = 2.5 * 0.98 * V * A / 1000
         y1 = t0 + Q1 / (G1 * Cp)  # 1出口温度
         Q2 = 1.5 * 0.98 * V * A / 1000
