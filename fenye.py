@@ -83,7 +83,11 @@ annotation_outlet2 = ax2.annotate('', (0, 0), textcoords="offset points", xytext
 if start_button1 and not start_button2:
     st.write('设备开始运行,记录换热器1和换热器2的出入口温度变化')
     t = 0
-
+    diff1 = 0.066433  # 温度差
+    ax1.text(1.02, 0.5, f'temperature difference: {diff1}', va='center', ha='left', transform=ax1.transAxes)
+    diff2 = 0.110723 # 温度差
+    ax2.text(1.02, 0.5, f'temperature difference: {diff2}', va='center', ha='left', transform=ax2.transAxes)
+    
     while t < 200:
 
         ii.image('aaa.gif')
@@ -154,6 +158,10 @@ if start_button1 and not start_button2:
     ii.image('aaa.gif')
 if start_button2:
     st.write('阀门状态已改变,继续记录换热器1和换热器2的出入口温度变化')
+    diff1 = 0.110723  # 温度差
+    ax1.text(1.02, 0.5, f'temperature difference: {diff1}', va='center', ha='left', transform=ax1.transAxes)
+    diff2 = 0.066433  # 温度差
+    ax2.text(1.02, 0.5, f'temperature difference: {diff2}', va='center', ha='left', transform=ax2.transAxes)
     t = 200
     t0 = 21.697749605077938
     x = []  # 重新初始化x列表
